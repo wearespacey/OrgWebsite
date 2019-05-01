@@ -19,9 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getVideo();
   }
+  
   finished() {
     this.showed = false;
   }
+
   getVideo() {
     const headers = new HttpHeaders({
       'Access-Control-Allow-Origin': 'http://localhost:4200',
