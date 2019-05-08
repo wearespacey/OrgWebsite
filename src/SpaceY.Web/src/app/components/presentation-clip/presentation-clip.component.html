@@ -1,0 +1,7 @@
+<section class="video" *ngIf=this.showed>
+  <div class="video-div">
+    <video id="presentationClip" autoplay (ended)="finished()">
+      <source type="video/mp4" src="{{ this.videoUrl }}">
+    </video>
+  </div>
+</section>
