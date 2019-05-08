@@ -1,11 +1,4 @@
-<div>
-    <mat-grid-list cols="1" rowHeight="1:0.5">
-        <mat-grid-tile *ngIf=this.showed>
-            <video #video style="height:95vh;" autoplay (ended)="finished()"></video>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <img src="assets/spacey.png" style="height:95vh;">
-        </mat-grid-tile>
-      </mat-grid-list>
-</div>
-²
+<app-presentation-clip [videoUrl]="this.videoUrl" [showed]="this.showed"></app-presentation-clip>
+<app-team></app-team>
+<app-projects></app-projects>
+<app-contact></app-contact>
