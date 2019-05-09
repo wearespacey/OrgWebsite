@@ -8,6 +8,8 @@ import {
   MatGridListModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,6 +19,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { PresentationClipComponent } from './components/presentation-clip/presentation-clip.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TeamComponent } from './components/team/team.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { TeamComponent } from './components/team/team.component';
     ProjectsComponent,
     PresentationClipComponent,
     ContactComponent,
-    TeamComponent
+    TeamComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { TeamComponent } from './components/team/team.component';
     MatButtonModule,
     MatCheckboxModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularSvgIconModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
