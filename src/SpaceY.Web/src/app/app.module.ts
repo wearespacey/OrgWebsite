@@ -20,6 +20,7 @@ import { PresentationClipComponent } from './components/presentation-clip/presen
 import { ContactComponent } from './components/contact/contact.component';
 import { TeamComponent } from './components/team/team.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { ScrollingFooterComponent } from './components/scrolling-footer/scrolling-footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     PresentationClipComponent,
     ContactComponent,
     TeamComponent,
-    AboutusComponent
+    AboutusComponent,
+    ScrollingFooterComponent
   ],
   imports: [
     BrowserModule,
