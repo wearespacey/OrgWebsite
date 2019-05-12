@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-scrolling-footer',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scrolling-footer.component.css']
 })
 export class ScrollingFooterComponent implements OnInit {
+  @ViewChild('backtotop') backToTop;
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
+    this.backToTop.nativeElement.style.display = 'none';
   }
 
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event) {
+    if (window.pageYOffset === 0) {
+      this.backToTop.nativeElement.style.display = 'none';
+    } else {
+      this.backToTop.nativeElement.style.display = 'inline-block';
+    }
+  }
+
+  goToTop() {
+    window.scrollTo(0, 0);
+  }
 }
