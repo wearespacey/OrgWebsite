@@ -1,0 +1,25 @@
+.avatars-container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background-size: cover;
+  display: inline-block;
+  padding: 5px;
+}
+
+.avatar:hover {
+  width: 52px;
+  height: 52px;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
