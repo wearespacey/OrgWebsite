@@ -7,6 +7,7 @@ import {
   MatCheckboxModule,
   MatGridListModule
 } from '@angular/material';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -44,7 +45,8 @@ import { ScrollingFooterComponent } from './components/scrolling-footer/scrollin
     MatGridListModule,
     HttpClientModule,
     AngularSvgIconModule,
-    ModalModule
+    ModalModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
