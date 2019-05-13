@@ -19,7 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { PresentationClipComponent } from './components/presentation-clip/presentation-clip.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { TeamComponent } from './components/team/team.component';
+import { MembersComponent } from './components/members/members.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ScrollingFooterComponent } from './components/scrolling-footer/scrolling-footer.component';
 
@@ -32,7 +32,7 @@ import { ScrollingFooterComponent } from './components/scrolling-footer/scrollin
     ProjectsComponent,
     PresentationClipComponent,
     ContactComponent,
-    TeamComponent,
+    MembersComponent,
     AboutusComponent,
     ScrollingFooterComponent
   ],
