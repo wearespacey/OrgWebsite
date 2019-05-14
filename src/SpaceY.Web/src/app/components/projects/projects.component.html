@@ -1,4 +1,25 @@
-<h1>Our Projects</h1>
-<div>
+<section id="projects">
+  <h1>Our Projects</h1>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <mat-card class="card" fxFlex="20%" tabindex="0" *ngFor="let project of sortedByCreationDateProjects">
+      <mat-card-header>
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">{{project.name}}</mat-card-title>
+          <mat-card-subtitle>{{project.owner.login}}</mat-card-subtitle>
+          <img mat-card-avatar>
+      </mat-card-header>
 
-</div>
+      <mat-card-content fxFlex="30%">{{project.description}}</mat-card-content>
+
+      <mat-card-actions>
+        <a mat-button [href]='project.html_url' target='_blank'>
+          <span class="mat-button-wrapper">SEE ON GITHUB</span>
+        </a>
+      </mat-card-actions>
+
+      <mat-card-footer style="padding-left:5px;">
+        <p>Last update : {{project.updated_at | date}}</p>
+        <!--<p>Created at {{project.created_at | date}}</p>-->
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</section>
