@@ -14,3 +14,7 @@ a {
   padding-bottom: 0;
   font-size: 12px;
 }
+
+.right {
+  padding: 0 0 0 100px;
+}

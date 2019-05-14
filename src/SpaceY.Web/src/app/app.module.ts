@@ -11,6 +11,7 @@ import {
 } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -27,6 +28,7 @@ import { MembersComponent } from './components/members/members.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ScrollingFooterComponent } from './components/scrolling-footer/scrolling-footer.component';
 import { EventsComponent } from './components/events/events.component';
+import { OcticonDirective } from './octicon.directive';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { EventsComponent } from './components/events/events.component';
     MembersComponent,
     AboutusComponent,
     ScrollingFooterComponent,
-    EventsComponent
+    EventsComponent,
+    OcticonDirective
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { EventsComponent } from './components/events/events.component';
     MatCardModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
