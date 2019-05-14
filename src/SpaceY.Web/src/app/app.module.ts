@@ -9,6 +9,7 @@ import {
   MatCardModule,
   MatToolbarModule
 } from '@angular/material';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
@@ -54,7 +55,8 @@ import { EventsComponent } from './components/events/events.component';
     MatTooltipModule,
     MatCardModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
