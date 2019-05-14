@@ -8,18 +8,9 @@ import { Repository } from '../../models/models';
 })
 export class ProjectsComponent implements OnInit {
 
-  @Input() projects: Repository[];
+  @Input() projectsGroups: [][];
 
   constructor() { }
 
   ngOnInit() { }
-
-  public get sortedByCreationDateProjects(): Repository[] {
-    return this.projects.sort(
-      (a, b) => {
-        // descending order
-        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
-      }
-    );
-  }
 }

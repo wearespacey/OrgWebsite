@@ -1,22 +1,23 @@
 <section id="projects">
   <h1>Our Projects</h1>
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-    <mat-card class="card" fxFlex="20%" tabindex="0" *ngFor="let project of sortedByCreationDateProjects">
+  <div style="padding-bottom: 1%;" *ngFor="let projects of projectsGroups" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+    <mat-card class="card" fxFlex="20%" tabindex="0" *ngFor="let project of projects">
       <mat-card-header>
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">{{project.name}}</mat-card-title>
-          <mat-card-subtitle>{{project.owner.login}}</mat-card-subtitle>
-          <img mat-card-avatar>
+          <mat-card-subtitle>
+            <span *ngIf="project.language">{{project.language}}</span>
+            <span *ngIf="project.language && project.license"> | </span>
+            <span *ngIf="project.license"><a [href]="project.license.url">{{project.license.name}}</a></span>
+          </mat-card-subtitle>
       </mat-card-header>
 
       <mat-card-content fxFlex="30%">{{project.description}}</mat-card-content>
 
       <mat-card-actions>
-        <a mat-button [href]='project.html_url' target='_blank'>
-          <span class="mat-button-wrapper">SEE ON GITHUB</span>
-        </a>
+        <a mat-stroked-button [href]='project.html_url' target='_blank'>SEE ON GITHUB</a>
       </mat-card-actions>
 
-      <mat-card-footer style="padding-left:5px;">
+      <mat-card-footer class="card-footer">
         <p>Last update : {{project.updated_at | date}}</p>
         <!--<p>Created at {{project.created_at | date}}</p>-->
       </mat-card-footer>

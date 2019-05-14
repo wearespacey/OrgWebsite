@@ -5,3 +5,12 @@
 .card {
   max-width: 400px;
 }
+
+a {
+  text-decoration: none;
+}
+
+.card-footer {
+  padding-bottom: 0;
+  font-size: 12px;
+}
