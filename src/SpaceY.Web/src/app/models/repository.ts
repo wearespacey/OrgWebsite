@@ -1,4 +1,4 @@
-﻿import { Owner, Permission, License } from './models';
+﻿import { Member, Permission, License } from './models';
 
 export interface Repository {
   id: number;
@@ -6,7 +6,7 @@ export interface Repository {
   name: string;
   full_name: string;
   private: boolean;
-  owner: Owner;
+  owner: Member;
   html_url: string;
   description: string;
   fork: boolean;
@@ -54,11 +54,11 @@ export interface Repository {
   ssh_url: string;
   clone_url: string;
   svn_url: string;
-  homepage?: null;
+  homepage?: string;
   size: number;
   stargazers_count: number;
   watchers_count: number;
-  language: string;
+  language?: string;
   has_issues: boolean;
   has_projects: boolean;
   has_downloads: boolean;
