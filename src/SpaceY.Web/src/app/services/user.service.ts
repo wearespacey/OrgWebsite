@@ -14,12 +14,11 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getMembers(currentPage = 1): Observable<Member[]> {
-    const members = this.httpClient.get<Member[]>(`${this.baseUrl}${this.endpoint}/members?page=${currentPage}`)
+  public getMembers(): Observable<Member[]> {
+    const members = this.httpClient.get<Member[]>(`${this.baseUrl}${this.endpoint}/members?per_page=9999999`)
       .pipe(
         catchError(this.handleError)
       );
-    // add algorithm to get all members (bypass pagination)
     return members;
   }
 

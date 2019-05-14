@@ -1,0 +1,8 @@
+<section id="members">
+  <h1>The Team</h1>
+  <div class='avatars-container'>
+    <a *ngFor='let member of members' target="_blank" [href]="member.html_url">
+      <img class='avatar' [src]="member.avatar_url" matTooltip="{{member.login}}">
+    </a>
+  </div>
+</section>

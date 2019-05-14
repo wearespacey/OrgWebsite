@@ -5,12 +5,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatGridListModule
+  MatGridListModule,
+  MatCardModule,
+  MatToolbarModule
 } from '@angular/material';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,9 +22,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { PresentationClipComponent } from './components/presentation-clip/presentation-clip.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { TeamComponent } from './components/team/team.component';
+import { MembersComponent } from './components/members/members.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ScrollingFooterComponent } from './components/scrolling-footer/scrolling-footer.component';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +36,10 @@ import { ScrollingFooterComponent } from './components/scrolling-footer/scrollin
     ProjectsComponent,
     PresentationClipComponent,
     ContactComponent,
-    TeamComponent,
+    MembersComponent,
     AboutusComponent,
-    ScrollingFooterComponent
+    ScrollingFooterComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { ScrollingFooterComponent } from './components/scrolling-footer/scrollin
     HttpClientModule,
     AngularSvgIconModule,
     ModalModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

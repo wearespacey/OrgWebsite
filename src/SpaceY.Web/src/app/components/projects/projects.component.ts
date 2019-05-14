@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Repository } from '../../models/models';
 
 @Component({
   selector: 'app-projects',
@@ -7,11 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  @Input() projects;
+  @Input() projects: Repository[];
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  public get sortedByCreationDateProjects(): Repository[] {
+    return this.projects.sort(
+      (a, b) => {
+        // descending order
+        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+      }
+    );
+  }
 }
