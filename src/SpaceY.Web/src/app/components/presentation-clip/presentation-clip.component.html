@@ -1,9 +1,10 @@
 <section id="presentation">
-  <div class="video" *ngIf=this.showed>
+  <div class="video" >
     <div class="video-div">
-      <video id="presentationClip" autoplay (ended)="finished()">
+      <video *ngIf="this.showed" class="presentation" autoplay (ended)="finished()">
         <source type="video/mp4" src="{{ this.videoUrl }}">
       </video>
+      <img *ngIf="!this.showed" class="presentation" src="../../../assets/background.png">
     </div>
   </div>
 </section>

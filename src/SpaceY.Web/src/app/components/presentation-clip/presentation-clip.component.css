@@ -25,7 +25,7 @@
   background-image: none;
 }
 
-#presentationClip {
+.presentation {
   margin: auto;
   position: absolute;
   z-index: -1;
