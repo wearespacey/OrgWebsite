@@ -1,6 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './modules/app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -16,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoutingModule } from './modules/app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,9 +26,9 @@ import { PresentationClipComponent } from './components/presentation-clip/presen
 import { ContactComponent } from './components/contact/contact.component';
 import { MembersComponent } from './components/members/members.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
-import { ScrollingFooterComponent } from './components/scrolling-footer/scrolling-footer.component';
 import { EventsComponent } from './components/events/events.component';
 import { OcticonDirective } from './octicon.directive';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -41,14 +41,15 @@ import { OcticonDirective } from './octicon.directive';
     ContactComponent,
     MembersComponent,
     AboutusComponent,
-    ScrollingFooterComponent,
+    ScrollTopComponent,
     EventsComponent,
-    OcticonDirective
+    OcticonDirective,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     MatButtonModule,
     MatCheckboxModule,
     MatGridListModule,
