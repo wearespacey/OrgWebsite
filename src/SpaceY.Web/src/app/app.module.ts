@@ -29,7 +29,6 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { EventsComponent } from './components/events/events.component';
 import { OcticonDirective } from './octicon.directive';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
-import { StickynavComponent } from './components/stickynav/stickynav.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +44,7 @@ import { StickynavComponent } from './components/stickynav/stickynav.component';
     ScrollTopComponent,
     EventsComponent,
     OcticonDirective,
-    ScrollTopComponent,
-    StickynavComponent
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
