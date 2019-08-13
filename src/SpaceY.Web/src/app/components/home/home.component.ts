@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
-import { Member, Repository } from 'src/app/models/Models';
+import { Member, Repository } from '../../models/Models';
 import { RepositoryService } from 'src/app/services/repository.service';
 
 @Component({
