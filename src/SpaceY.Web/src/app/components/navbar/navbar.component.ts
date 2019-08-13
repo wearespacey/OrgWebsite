@@ -56,7 +56,7 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  private isDirectlyVisible(): boolean {
+  public isDirectlyVisible(): boolean {
     return this.navigationEnd === '/events';
   }
 }
