@@ -1,9 +1,8 @@
 <section id="presentation">
   <div class="video" >
     <div class="video-div">
-      <video *ngIf="this.showed" class="presentation" autoplay (ended)="finished()">
-        <source type="video/mp4" src="{{ this.videoUrl }}">
-      </video>
+        <div id="player"></div>
+        <iframe *ngIf="this.showed" #videoyt class="presentation" src="https://www.youtube.com/embed/z8eMjlWTzSY?controls=0&autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
       <img *ngIf="!this.showed" class="presentation" src="../../../assets/background.png">
     </div>
   </div>

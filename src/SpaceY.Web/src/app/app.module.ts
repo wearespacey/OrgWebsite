@@ -16,6 +16,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './modules/app-routing.module';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -61,7 +62,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     FlexLayoutModule,
     MatToolbarModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
