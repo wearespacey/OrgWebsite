@@ -19,7 +19,7 @@ steps:
     cd src/SpaceY.Web/
     npm install -g @angular/cli
     npm install
-    ng build SpaceY --prod --build-optimizer
+    run prod-build-dev
   displayName: 'npm install and build'
 - task: CopyFiles@2
   inputs:
