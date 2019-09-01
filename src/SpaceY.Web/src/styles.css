@@ -1,7 +1,29 @@
 /* You can add global styles to this file, and also import other style files*/
 .container {
   margin: 0 auto;
-  width: 90%;
+}
+
+h2{
+  margin:  0% 10%;
+  padding-top: 20px;
+  font-family: Gill Sans, sans-serif;
+
+
+}
+
+section:hover .underscore{
+  border-bottom: 3px solid #343a40;
+  width: 200px;
+}
+
+
+.underscore{
+  display: inline-block;
+  border-bottom: 3px solid #343a40;
+  white-space: nowrap;
+  width: 6.429rem;
+  transition: 0.5s ease;
+  margin: 0% 10%;
 }
 
 @media screen and (min-width: 1000px) {

@@ -1,5 +1,15 @@
 #members {
+background: #2e406f;
+color: white;
+}
 
+
+.underscore{
+  border-color:white;
+}
+
+section:hover  .underscore{
+  border-color:white;
 }
 
 .avatars-container {
@@ -10,10 +20,19 @@
   align-content: center;
 }
 
+a{
+  margin: 3% auto;
+}
+
+p{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .avatar {
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   flex-shrink: 0;
   object-fit: cover;
   background-size: cover;
@@ -22,8 +41,6 @@
 }
 
 .avatar:hover {
-  width: 52px;
-  height: 52px;
-  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
   cursor: pointer;
 }
