@@ -14,13 +14,18 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
 - script: |
     cd src/SpaceY.Web/
+    displayName: 'go to the angular folder'
+- script: |
     npm install -g @angular/cli
+    displayName: 'Installing Angular CLI'
+- script: |
     npm install
+    displayName: 'Installing packages'
+- script: |
     ng build --prod --build-optimizer
-  displayName: 'npm install and build'
+  displayName: 'build production'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
