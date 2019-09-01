@@ -30,6 +30,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { EventsComponent } from './components/events/events.component';
 import { OcticonDirective } from './octicon.directive';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
