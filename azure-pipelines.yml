@@ -14,13 +14,15 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
-- script: |
-    cd src/SpaceY.Web/
-    npm install -g @angular/cli
-    npm install
-    ng build SpaceY --prod --build-optimizer
-  displayName: 'npm install and build'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'src/SpaceY.Web/'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'src/SpaceY.Web/'
+    customCommand: 'run prod-build-dev'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
