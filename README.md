@@ -19,10 +19,11 @@
     <img src="https://nsa40.casimages.com/img/2019/08/11/190811015143756586.jpg" alt="Logo" width="120" height="80">
   </a>
 
-  <h3 align="center">This is the repo of SpaceY official website</h3>
+  <h3 align="center">This is the repository of our official website</h3>
 
   <p align="center">
     <a href="https://github.com/wearespacey/orgwebsite/issues">Report Bug</a>
+    •
     <a href="https://github.com/wearespacey/orgwebsite/issues">Request Feature</a>
   </p>
 </p>
@@ -32,14 +33,15 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [License](#license)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [License](#license)
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is the website where you'll find everything you need to know about SpaceY.
+This is the website where you'll find everything you need to know about us.
 
 ### Built With
 You will find herebelow the frameworks and dependencies used by this solution:

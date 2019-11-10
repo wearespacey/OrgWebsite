@@ -1,0 +1,11 @@
+<section id="members" >
+  <h2>THE TEAM</h2>
+  <div class="underscore"></div>
+  <div class='container avatars-container'>
+    <a *ngFor='let member of members' target="_blank" [href]="member.html_url">
+      <img class='avatar' [src]="member.avatar_url" matTooltip="{{member.login}}">
+    </a>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus architecto provident quasi, nam amet ipsum temporibus consequatur quis fugit, ratione porro hic blanditiis velit incidunt voluptate est eos. Perspiciatis, tempora?</p>
+
+  </div>
+</section>

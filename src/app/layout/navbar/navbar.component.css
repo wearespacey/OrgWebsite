@@ -1,0 +1,15 @@
+#navbar {
+  padding: .5rem 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 20px;
+
+  z-index: 99999;
+}

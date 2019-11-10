@@ -1,0 +1,14 @@
+#footer {
+  background: #343a40;
+  color: white;
+  height: 5vh;
+}
+
+.footerText{
+  text-align: center;
+}
+
+.footerLogo{
+  width: 60px;
+  padding: 10px;
+}
