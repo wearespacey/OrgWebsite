@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files*/
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+h2{
+  margin:  0% 10%;
+  padding-top: 20px;
+  font-family: Gill Sans, sans-serif;
+}
+
+section:hover .underscore{
+  border-bottom: 3px solid #343a40;
+  width: 200px;
+}
+
+
+.underscore{
+  display: inline-block;
+  border-bottom: 3px solid #343a40;
+  white-space: nowrap;
+  width: 6.429rem;
+  transition: 0.5s ease;
+  margin: 0% 10%;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+.page-container .page-content {
+  margin-top: 1rem;
+  padding-left: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+}
+
+router-outlet {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

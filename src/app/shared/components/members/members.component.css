@@ -1,0 +1,47 @@
+#members {
+  background: #2e406f;
+  color: white;
+  padding-top: 40px;
+}
+
+
+.underscore{
+  border-color:white;
+}
+
+section:hover .underscore{
+  border-color:white;
+}
+
+.avatars-container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+a{
+  margin: 3% auto;
+}
+
+p{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background-size: cover;
+  display: inline-block;
+  padding: 5px;
+}
+
+.avatar:hover {
+  border: 2px solid whitesmoke;
+  cursor: pointer;
+}

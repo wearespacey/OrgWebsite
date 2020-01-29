@@ -1,0 +1,27 @@
+<section id="projects">
+  <h2>OUR PROJECTS</h2>
+  <div class="underscore"></div>
+  <div class="project-cards">
+    <mat-card *ngFor="let project of projects" class="project-card">
+      <mat-card-header>
+          <mat-card-title>
+            <p><span octicon="repo" width="16"></span> {{project.name}}</p>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <span *ngIf="project.language">{{project.language}}</span>
+            <span *ngIf="project.language && project.license"> | </span>
+            <span *ngIf="project.license" octicon="law" width="16" color="grey" matTooltip="{{project.license.name}}"></span>
+          </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="project-card-content">{{project.description}}</mat-card-content>
+
+      <mat-card-footer class="project-card-footer">
+        <p>
+          Last update : {{project.updated_at | date}}
+          <a *ngIf='!project.private && project.html_url' [href]='project.html_url' target='_blank' octicon="mark-github" width="16" color="black"></a>
+        </p>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</section>
