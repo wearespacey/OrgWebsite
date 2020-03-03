@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
-import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { ContentLayoutComponent } from '@core/layout/content-layout/content-layout.component';
+import { NotFoundComponent } from '@core/layout/not-found/not-found.component';
 
 const routes: Routes = [
   {

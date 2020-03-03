@@ -1,4 +1,4 @@
-﻿import { Member, Permission, License } from './models';
+﻿import { Member, Permission, License } from './';
 
 export interface Repository {
   id: number;

@@ -1,3 +1,2 @@
-export * from './services/api';
-export * from './models/models';
-export * from './data.module';
+export * from './services';
+export * from './models';

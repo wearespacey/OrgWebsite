@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Member } from '../models/models';
+import { Member } from '../models';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class UserService {
   private readonly baseUrl = 'https://api.github.com';
   private readonly endpoint = '/orgs/wearespacey';
