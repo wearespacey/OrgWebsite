@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-presentation-clip',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 })
 export class PresentationClipComponent implements OnInit, AfterViewInit {
   @Input() showed: boolean;
-  @Input() videoUrl: string;
+  @Input() videoUrl: SafeUrl;
 
   constructor() { }
 

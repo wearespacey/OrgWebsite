@@ -1,5 +1,5 @@
 export * from './license';
-export * from './member';
+export * from './owner';
 export * from './organization';
-export * from './permission';
+export * from './permissions';
 export * from './repository';

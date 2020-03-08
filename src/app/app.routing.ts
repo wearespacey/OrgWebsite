@@ -13,10 +13,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('@modules/home/home.module').then(m => m.HomeModule)
       },
-      {
-        path: 'events',
-        loadChildren: () => import('@modules/events/events.module').then(m => m.EventsModule)
-      }
+      // {
+      //   path: 'events',
+      //   loadChildren: () => import('@modules/events/events.module').then(m => m.EventsModule)
+      // }
     ]
   },
   {
