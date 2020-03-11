@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
-import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { ContentLayoutComponent } from '@core/layout/content-layout/content-layout.component';
+import { NotFoundComponent } from '@core/layout/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -13,10 +13,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('@modules/home/home.module').then(m => m.HomeModule)
       },
-      {
-        path: 'events',
-        loadChildren: () => import('@modules/events/events.module').then(m => m.EventsModule)
-      }
+      // {
+      //   path: 'events',
+      //   loadChildren: () => import('@modules/events/events.module').then(m => m.EventsModule)
+      // }
     ]
   },
   {

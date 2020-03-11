@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/data/services/user.service';
-import { Member, Repository } from '../../../data/models/Models';
+import { Owner, Repository } from '@data/models';
 import { RepositoryService } from 'src/app/data/services/repository.service';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +11,14 @@ import { RepositoryService } from 'src/app/data/services/repository.service';
 })
 export class HomeComponent implements OnInit {
 
-  members: Member[];
+  members: Owner[];
   repos: Repository[];
-  videoUrl = 'https://www.youtube.com/embed/z8eMjlWTzSY?controls=0&autoplay=1&enablejsapi=1';
+  videoUrl: SafeUrl;
   showed = true;
 
-  constructor(private userService: UserService, private repositoryService: RepositoryService) { }
+  constructor(private userService: UserService, private repositoryService: RepositoryService, private sanitizer: DomSanitizer) {
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/z8eMjlWTzSY?controls=0&autoplay=1&enablejsapi=1');
+  }
 
   ngOnInit() {
     this.userService.getMembers().subscribe(res => {
@@ -23,7 +26,9 @@ export class HomeComponent implements OnInit {
     });
 
     this.repositoryService.get().subscribe(res => {
-      this.repos = res.sort((a, b) => new Date(b.created_at).getTime() - new Date (a.created_at).getTime());
+      this.repos = res
+        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+        .filter(r => !r['is_template']);
     });
   }
 }

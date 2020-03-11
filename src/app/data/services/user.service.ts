@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Member } from '../models/models';
+import { Owner } from '../models';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class UserService {
   private readonly baseUrl = 'https://api.github.com';
   private readonly endpoint = '/orgs/wearespacey';
 
   constructor(private httpClient: HttpClient) { }
 
-  public getMembers(): Observable<Member[]> {
-    const members = this.httpClient.get<Member[]>(`${this.baseUrl}${this.endpoint}/members?per_page=9999999`)
+  public getMembers(): Observable<Owner[]> {
+    const members = this.httpClient.get<Owner[]>(`${this.baseUrl}${this.endpoint}/members?per_page=9999999`)
       .pipe(
         catchError(this.handleError)
       );

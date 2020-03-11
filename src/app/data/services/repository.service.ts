@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Repository } from '../models/models';
+import { Repository } from '../models';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,9 @@ export class RepositoryService {
   constructor(private httpClient: HttpClient) { }
 
   public get(): Observable<Repository[]> {
-    const repos =  this.httpClient.get<Repository[]>(`${this.baseUrl}${this.endpoint}/repos?per_page=9999999`)
+    const repos = this.httpClient.get<Repository[]>(`${this.baseUrl}${this.endpoint}/repos?per_page=9999999`, {
+      headers: { 'Accept': 'application/vnd.github.baptiste-preview+json' }
+    })
       .pipe(
         catchError(this.handleError)
       );

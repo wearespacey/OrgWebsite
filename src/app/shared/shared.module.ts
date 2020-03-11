@@ -1,50 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material.module';
 import { OcticonDirective } from './octicon.directive';
-import { AboutusComponent } from './components/aboutus/aboutus.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { MembersComponent } from './components/members/members.component';
-import { PresentationClipComponent } from './components/presentation-clip/presentation-clip.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 @NgModule({
+  declarations: [
+    OcticonDirective
+  ],
   imports: [
+    // vendor
     CommonModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
+
+    // material
     MaterialModule
   ],
-  declarations: [
-    OcticonDirective,
-
-    AboutusComponent,
-    ContactComponent,
-    MembersComponent,
-    PresentationClipComponent,
-    ProjectsComponent,
-    ScrollTopComponent
-  ],
   exports: [
-    CommonModule,
+    // vendor
+    CommonModule,           // ngIf, ngFor
+    RouterModule,           // routerLink, <router-outlet>
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
 
+    // material
     MaterialModule,
-    OcticonDirective,
 
-    AboutusComponent,
-    ContactComponent,
-    MembersComponent,
-    PresentationClipComponent,
-    ProjectsComponent,
-    ScrollTopComponent
+    // local
+    OcticonDirective,
   ]
 })
-export class SharedModule {}
+export class SharedModule { }
