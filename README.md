@@ -47,6 +47,8 @@ This is the website where you'll find everything you need to know about us.
 You will find herebelow the frameworks and dependencies used by this solution:
 * [Angular](https://angular.io/) with [Visual Studio Code](https://code.visualstudio.com/)
 
+<!-- Add dependencies here -->
+
 <!-- LICENSE -->
 ## License
 
