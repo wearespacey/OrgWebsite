@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "spacey",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/spacey"
+      },
+      "azureHosting": {
+        "subscription": "0e3835db-7764-4236-85f1-b6ebd9ecb5f7",
+        "resourceGroupName": "SpaceY",
+        "account": "spacey"
+      }
+    }
+  ]
+}
