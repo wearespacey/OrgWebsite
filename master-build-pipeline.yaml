@@ -20,7 +20,8 @@ steps:
      ng build --prod --build-optimizer
   - task: CopyFiles@2
     inputs:
-      contents: 'dist/**'
+      SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+      contents: '**'
       targetFolder: $(Build.ArtifactStagingDirectory)
   - task: PublishBuildArtifacts@1
     inputs:
