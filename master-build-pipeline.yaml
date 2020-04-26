@@ -22,7 +22,7 @@ steps:
     displayName: 'npm build'
   - task: CopyFiles@2
     inputs:
-      SourceFolder: '$(Build.SourcesDirectory)/dist'
+      SourceFolder: '$(Build.SourcesDirectory)/dist/spacey'
       contents: '**'
       targetFolder: $(Build.ArtifactStagingDirectory)
       CleanTargetFolder: true
