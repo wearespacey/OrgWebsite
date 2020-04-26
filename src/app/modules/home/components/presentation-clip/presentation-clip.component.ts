@@ -6,7 +6,7 @@ import { SafeUrl } from '@angular/platform-browser';
   templateUrl: './presentation-clip.component.html',
   styleUrls: ['./presentation-clip.component.css']
 })
-export class PresentationClipComponent implements OnInit, AfterViewInit {
+export class PresentationClipComponent implements OnInit {
   @Input() showed: boolean;
   @Input() videoUrl: SafeUrl;
 
@@ -15,16 +15,4 @@ export class PresentationClipComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
 
-  async ngAfterViewInit() {
-    await this.delay(19000);
-    this.finished();
-  }
-
-  finished() {
-    this.showed = false;
-  }
-
-  delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
 }

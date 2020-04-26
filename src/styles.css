@@ -2,7 +2,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: black;
+}
 .container {
   margin: 0 auto;
 }
