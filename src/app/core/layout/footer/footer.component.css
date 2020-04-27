@@ -1,11 +1,10 @@
 #footer {
   background: #343a40;
   color: white;
-  height: 5vh;
-}
-
-.footerText{
-  text-align: center;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerLogo{
